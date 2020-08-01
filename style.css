@@ -1,0 +1,42 @@
+.twoTimesButton{
+    color:gray;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+}
+
+.twoTimesButton:before{
+    content: "Acelere a velocidade dos áudios em 2x!";
+    background-color: #000;
+    color: #FFF;
+    font-size: 13px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 250px;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.twoTimesButton:after{
+    content: "";
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    left: 5px;
+    bottom: -16px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #000 transparent;
+    transition: all .4s ease;
+}
+
+.twoTimesButton:hover:after,
+.twoTimesButton:hover:before{
+    opacity: 1;
+}
